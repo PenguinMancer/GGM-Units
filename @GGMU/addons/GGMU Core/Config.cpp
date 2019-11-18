@@ -67,12 +67,20 @@ class CfgWorlds {					//Setting up generic names for all our factions.
 				Clark = "Clark";
 			};
 		};
-		class GGMU_Codename_Penguin {		//Specifically setting up names for our one use units.
+		class GGMU_Penguin_Name {		//Specifically setting up names for our one use units.
 			class FirstNames {
-				Codename = "Codename";
+				Codename = "Agent";
 			};
 			class LastNames {
 				Penguin = "Penguin";
+			};
+		};
+		class GGMU_Smiley_Name {
+			class FirstNames {
+				Codename = "Agent";
+			};
+			class LastNames {
+				Smiley = "Smiley";
 			};
 		};
 	};
@@ -80,11 +88,19 @@ class CfgWorlds {					//Setting up generic names for all our factions.
 
 class CfgIdentities {						//Setting custom identities for our special units.
     class GGMU_Identity_Penguin {
-        name = "Codename Penguin";
+        name = "Agent Penguin";
         nameSound = "";
         face = "Oakes";
         glasses = "None";
         speaker = "ACE_NoVoice";
+        pitch = 1;
+    };
+	class GGMU_Identity_Smiley {
+        name = "Agent Smiley";
+        nameSound = "";
+        face = "Sturrock";
+        glasses = "None";
+        speaker = "male01engvr";
         pitch = 1;
     };
 };
@@ -121,7 +137,7 @@ class cfgFactionClasses
 	};
 	class GGMU_PMC_CO
 	{
-		displayName = "Manticorps";
+		displayName = "Manticore PMC Company";
 		priority = 3;
 		side = 2;
 		icon = "\a3\Data_f\cfgFactionClasses_IND_ca.paa";
