@@ -3,7 +3,7 @@ class CfgPatches {
 		units[] = {"GGMU_Penguin_1"};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"GGMU_Core"};
+		requiredAddons[] = {"GGMU_Core","cba_xeh"};
 		version="1";
 		projectName="GGMU_Specials";
 		author="PenguinMancer";
