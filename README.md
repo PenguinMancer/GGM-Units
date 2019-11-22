@@ -1,5 +1,5 @@
 # GGM-Units
-A collection of Generic Military and Guerilla units for Arma 3.
+A collection of Generic Military and Guerrilla units for Arma 3.
 
 ## Copyright / License
 Click here for <a href="https://github.com/PenguinMancer/GGM-Units/wiki/License">License Info</a>. You are free to release any
