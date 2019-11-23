@@ -26,19 +26,18 @@ class EventHandlers;
 
 class CfgVehicles {		
 
-	class SoldierGB;
-	class SoldierWB: SoldierGB {};
-	class B_Soldier_base_F: SoldierWB { class EventHandlers; }; // I need this massive chunk of code to hope to make eventhandlers work.
-	class B_Soldier_F: B_Soldier_base_F {};
+	class B_Soldier_F;
 	class GGMU_PMC_Base: B_Soldier_F { //Base Unit
 		side=2;
 		scope=0;
 		author="PenguinMancer";
-		identityTypes[] = {"LanguageENG_F","Head_NATO","NoGlasses"};
+		identityTypes[] = {"LanguageENG_F","Head_NATO","Head_Russian","Head_Asian","NoGlasses"};
 		faction = "GGMU_PMC_CO";
 		vehicleClass = "GGMU_Men"; // Puts unit in the vehicleclass
 		genericNames = "GGMU_Western_Names";
-		nakedUniform="U_BasicBody";
+		class EventHandlers;
+		Items[] = {"FirstAidKit"};
+		RespawnItems[] = {"FirstAidKit"};//First Aids and similar items.
 	};
 
 
@@ -57,7 +56,6 @@ class CfgVehicles {
 			"USP_CRYE_CPC_LIGHT_RGR", 	//Vest, leave all these in for now, gets changed at randomization step.
 			"cox_chelm_dgreen",			//Helmet
 			"TRYK_headset_Glasses", 	//Facewear
-			"FirstAidKit",
 			"ItemGPS",
 			"ItemMap",
 			"ItemCompass",
@@ -69,7 +67,6 @@ class CfgVehicles {
 			"USP_CRYE_CPC_LIGHT_RGR", 	//Vest
 			"cox_chelm_dgreen",			//Helmet
 			"TRYK_headset_Glasses", 	//Facewear
-			"FirstAidKit",
 			"ItemGPS",
 			"ItemMap",
 			"ItemCompass",
@@ -93,7 +90,6 @@ class CfgVehicles {
 			"USP_CRYE_JPC_MG_RGR", 		//Vest
 			"cox_chelm_dgreen",			//Helmet
 			"TRYK_headset_Glasses", 	//Facewear
-			"FirstAidKit",
 			"ItemGPS",
 			"ItemMap",
 			"ItemCompass",
@@ -105,7 +101,6 @@ class CfgVehicles {
 			"USP_CRYE_JPC_MG_RGR", 		//Vest
 			"cox_chelm_dgreen",			//Helmet
 			"TRYK_headset_Glasses", 	//Facewear
-			"FirstAidKit",
 			"ItemGPS",
 			"ItemMap",
 			"ItemCompass",

@@ -40,6 +40,7 @@ class CfgWorlds {					//Setting up generic names for all our factions.
 				Matthew = "Matthew";
 				Jack = "Jack";
 				Logan = "Logan";
+				Taco = "Taco";
 			};
 			class LastNames {
 				Smith = "Smith";
@@ -118,6 +119,13 @@ class cfgFactionClasses
 	{
 		displayName = "Eastern Guerilla";
 		priority = 3;
+		side = 2;
+		icon = "\a3\Data_f\cfgFactionClasses_OPF_ca.paa";
+	};
+	class GGMU_Architects_Chosen
+	{
+		displayName = "The Architect's Chosen";
+		priority = 3;
 		side = 0;
 		icon = "\a3\Data_f\cfgFactionClasses_OPF_ca.paa";
 	};
@@ -132,7 +140,7 @@ class cfgFactionClasses
 	{
 		displayName = "Western Guerilla";
 		priority = 3;
-		side = 1;
+		side = 2;
 		icon = "\a3\Data_f\cfgFactionClasses_BLU_ca.paa";
 	};
 	class GGMU_PMC_CO

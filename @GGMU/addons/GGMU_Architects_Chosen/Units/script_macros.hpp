@@ -1,0 +1,1 @@
+#define Standard_Grenades_PMC HandGrenade,HandGrenade,SmokeShellGreen,SmokeShellRed,ACE_HandFlare_White,ACE_HandFlare_White
