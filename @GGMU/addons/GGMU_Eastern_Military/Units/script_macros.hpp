@@ -1,0 +1,1 @@
+#define Standard_Grenades_EastMil rhs_mag_9x19_17,rhssaf_mag_brd_m83_white,rhssaf_mag_brd_m83_red
