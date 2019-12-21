@@ -26,9 +26,8 @@ class EventHandlers;
 
 class CfgVehicles {		
 
-	class B_Soldier_F;
-	class GGMU_PMC_Base: B_Soldier_F { //Base Unit
-		side=2;
+	class I_Soldier_F;
+	class GGMU_PMC_Base: I_Soldier_F { //Base Unit
 		scope=0;
 		author="PenguinMancer";
 		identityTypes[] = {"LanguageENG_F","Head_NATO","Head_Russian","Head_Asian","NoGlasses"};
@@ -40,7 +39,23 @@ class CfgVehicles {
 		RespawnItems[] = {"FirstAidKit"};//First Aids and similar items.
 	};
 
-
+	class GGMU_PMC_Blank: GGMU_PMC_Base //Rifleman
+	{
+		scope=2;
+		displayName = "Manticore Soldier"; // In-game name of unit
+		uniformClass="USP_CRYE_G3C_SHORT_BLK_RGR"; // Uniform Class
+		backpack = ""; // Backpack Class
+		weapons[] = {}; // Weapons added to the unit. Rangefinders/Binoculars also go in weapon slots. Weapons are added at randomization step for this unit.
+		respawnWeapons[]= {};
+		magazines[] = {}; //Grenades added to the unit. Magazines also go here, but are added at randomization step for this unit.
+		respawnMagazines[]= {};
+		linkedItems[]=
+		{}; //Item's added to the unit. 
+		respawnLinkedItems[]=
+		{};
+	};
+	
+	
 	class GGMU_PMC_Rifleman_1: GGMU_PMC_Base //Rifleman
 	{
 		scope=2;

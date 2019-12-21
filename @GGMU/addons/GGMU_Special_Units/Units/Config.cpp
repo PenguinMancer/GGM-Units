@@ -13,10 +13,8 @@ class CfgPatches {
 class Eventhandlers {};
 
 class CfgVehicles {		
-class B_Soldier_F;
-	
-	class GGMU_Penguin_1: B_Soldier_F { //Sab Unit	
-		side=2;
+class I_Soldier_F;
+	class GGMU_Penguin_1: I_Soldier_F { //Sab Unit	
 		scope=2;
 		author="PenguinMancer";
 		identityTypes[] = {"LanguageENG_F","Head_NATO","NoGlasses"};
@@ -62,9 +60,8 @@ class B_Soldier_F;
 		};
 		
 	};
-
-		class GGMU_Smiley_1: B_Soldier_F { //Jayme Unit
-		side=2;
+	
+	class GGMU_Smiley_1: I_Soldier_F { //Jayme Unit
 		scope=2;
 		author="PenguinMancer";
 		identityTypes[] = {"LanguageENG_F","Head_NATO","NoGlasses"};

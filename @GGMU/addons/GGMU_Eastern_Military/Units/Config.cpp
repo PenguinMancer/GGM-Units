@@ -26,9 +26,8 @@ class EventHandlers;
 
 class CfgVehicles {		
 
-	class B_Soldier_F;
-	class GGMU_EastMil_Base: B_Soldier_F { //Base Unit
-		side=0;
+	class O_Soldier_F;
+	class GGMU_EastMil_Base: O_Soldier_F { //Base Unit
 		scope=0;
 		author="PenguinMancer";
 		identityTypes[] = {"LanguageENG_F","Head_Russian","Head_Euro","NoGlasses"};
@@ -41,6 +40,22 @@ class CfgVehicles {
 	};
 
 
+	class GGMU_EastMil_Blank: GGMU_EastMil_Base //Rifleman
+	{
+		scope=2;
+		displayName = "Soldier"; // In-game name of unit
+		uniformClass="rhs_uniform_flora_patchless"; // Uniform Class
+		backpack = ""; // Backpack Class
+		weapons[] = {}; // Weapons added to the unit. Rangefinders/Binoculars also go in weapon slots. Weapons are added at randomization step for this unit.
+		respawnWeapons[]= {};
+		magazines[] = {}; //Grenades added to the unit. Magazines also go here, but are added at randomization step for this unit.
+		respawnMagazines[]= {};
+		linkedItems[]=
+		{}; //Item's added to the unit. 
+		respawnLinkedItems[]=
+		{};
+	};
+	
 	class GGMU_EastMil_Rifleman_1: GGMU_EastMil_Base //Rifleman
 	{
 		scope=2;
