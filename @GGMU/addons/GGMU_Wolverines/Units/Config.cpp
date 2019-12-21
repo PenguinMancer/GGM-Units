@@ -1,20 +1,20 @@
 class CfgPatches {
-	class GGMU_East_Mil {
-		units[] = {"GGMU_EastMil_Rifleman"};
+	class GGMU_Wolverine {
+		units[] = {"GGMU_Wolverine_Rifleman"};
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"GGMU_Core","cba_xeh"};
 		version="1";
-		projectName="GGMU_East_Military";
+		projectName="GGMU_PMC_CO";
 		author="PenguinMancer";
 	};
 };
 
 class CfgFunctions {
-	class EastMil {
-		class EastMilcommon {
+	class Wol {
+		class Wolcommon {
 			class InitUnit {
-				file = "\GGMU_Eastern_Military\Scripts\InitUnit.sqf";
+				file = "\GGMU_Wolverines\Scripts\InitUnit.sqf";
 			};
 		};
 	};
@@ -26,25 +26,24 @@ class EventHandlers;
 
 class CfgVehicles {		
 
-	class O_Soldier_F;
-	class GGMU_EastMil_Base: O_Soldier_F { //Base Unit
+	class B_Soldier_F;
+	class GGMU_Wolverine_Base: B_Soldier_F { //Base Unit
 		scope=0;
 		author="PenguinMancer";
-		identityTypes[] = {"LanguageENG_F","Head_Russian","Head_Euro","NoGlasses"};
-		faction = "GGMU_East_Military";		
+		identityTypes[] = {"LanguageENG_F","Head_African","Head_Greek","NoGlasses"};
+		faction = "GGMU_Wolverine";
 		vehicleClass = "GGMU_Men"; // Puts unit in the vehicleclass
-		genericNames = "GGMU_Western_Names"; //To be changed.
+		genericNames = "GGMU_Western_Names";
 		class EventHandlers;
 		Items[] = {"FirstAidKit"};
 		RespawnItems[] = {"FirstAidKit"};//First Aids and similar items.
 	};
 
-
-	class GGMU_EastMil_Blank: GGMU_EastMil_Base //Rifleman
+	class GGMU_Wolverine_Blank: GGMU_Wolverine_Base //Rifleman
 	{
 		scope=2;
-		displayName = "Soldier"; // In-game name of unit
-		uniformClass="rhs_uniform_flora_patchless"; // Uniform Class
+		displayName = "Wolverine Soldier"; // In-game name of unit
+		uniformClass="Project_BJC"; // Uniform Class
 		backpack = ""; // Backpack Class
 		weapons[] = {}; // Weapons added to the unit. Rangefinders/Binoculars also go in weapon slots. Weapons are added at randomization step for this unit.
 		respawnWeapons[]= {};
@@ -56,20 +55,21 @@ class CfgVehicles {
 		{};
 	};
 	
-	class GGMU_EastMil_Rifleman: GGMU_EastMil_Base //Rifleman
+	class GGMU_Wolverine_Rifleman: GGMU_Wolverine_Base //Rifleman
 	{
 		scope=2;
-		displayName = "Rifleman"; // In-game name of unit
-		uniformClass="rhs_uniform_flora_patchless"; // Uniform Class
-		backpack = ""; // Backpack Class
+		displayName = "Wolverine Rifleman"; // In-game name of unit
+		uniformClass="Project_BJC_PCU_Jean_blk1"; // Uniform Class
+		backpack = "VSM_MulticamTropic_Backpack_Compact"; // Backpack Class
 		weapons[] = {"Throw","Put"}; // Weapons added to the unit. Rangefinders/Binoculars also go in weapon slots. Weapons are added at randomization step for this unit.
 		respawnWeapons[]= {"Throw","Put"};
-		magazines[] = {Standard_Grenades_EastMil}; //Grenades added to the unit. Magazines also go here, but are added at randomization step for this unit.
-		respawnMagazines[]= {Standard_Grenades_EastMil};
+		magazines[] = {}; //Grenades added to the unit. Magazines also go here, but are added at randomization step for this unit.
+		respawnMagazines[]= {};
 		linkedItems[]=
 		{
-			"rhs_6b23_rifleman", 		//Vest, leave all these in for now, gets changed at randomization step.
-			"rhs_6b26_bala_green",		//Helmet
+			"rhs_6sh92", 					//Vest
+			"CUP_H_FR_BoonieMARPAT",		//Helmet
+			"VSM_Goggles", 					//Facewear
 			"ItemGPS",
 			"ItemMap",
 			"ItemCompass",
@@ -78,8 +78,9 @@ class CfgVehicles {
 		}; //Item's added to the unit. 
 		respawnLinkedItems[]=
 		{
-			"rhs_6b23_rifleman", 		//Vest, 
-			"rhs_6b26_bala_green",		//Helmet
+			"rhs_6sh92", 					//Vest
+			"CUP_H_FR_BoonieMARPAT",		//Helmet
+			"VSM_Goggles", 					//Facewear
 			"ItemGPS",
 			"ItemMap",
 			"ItemCompass",

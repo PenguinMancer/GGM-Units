@@ -1,6 +1,6 @@
 class CfgPatches {
-	class GGMU_PMC_CO {
-		units[] = {"Architect's Chosen","GGMU_ChosenMilitia_Rifleman_1"};
+	class GGMU_Chosen {
+		units[] = {"GGMU_ChosenMilitia_Blank","GGMU_ChosenMilitia_Rifleman_1"};
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"GGMU_Core","cba_xeh"};
@@ -55,7 +55,7 @@ class CfgVehicles {
 		{};
 	};
 
-	class GGMU_ChosenMilitia_Rifleman_1: GGMU_ChosenMilitia_Base //Rifleman
+	class GGMU_ChosenMilitia_Rifleman: GGMU_ChosenMilitia_Base //Rifleman
 	{
 		scope=2;
 		displayName = "Architect's Chosen Grunt"; // In-game name of unit

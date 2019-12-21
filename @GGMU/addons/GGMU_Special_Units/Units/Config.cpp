@@ -14,7 +14,7 @@ class Eventhandlers {};
 
 class CfgVehicles {		
 class I_Soldier_F;
-	class GGMU_Penguin_1: I_Soldier_F { //Sab Unit	
+	class GGMU_Penguin: I_Soldier_F { //Sab Unit	
 		scope=2;
 		author="PenguinMancer";
 		identityTypes[] = {"LanguageENG_F","Head_NATO","NoGlasses"};
@@ -61,7 +61,7 @@ class I_Soldier_F;
 		
 	};
 	
-	class GGMU_Smiley_1: I_Soldier_F { //Jayme Unit
+	class GGMU_Smiley: I_Soldier_F { //Jayme Unit
 		scope=2;
 		author="PenguinMancer";
 		identityTypes[] = {"LanguageENG_F","Head_NATO","NoGlasses"};

@@ -1,32 +1,39 @@
 //Uniforms and other worn gear start here.
 _Uniforms = [
-"sweater_drab",
-"sweater_plain_grey",
-"sweater_plain_tan"
+"Project_BJC",
+"Project_BJC_PCU_Jean_blk1",
+"Project_BJC_PCU_Jean5",
+"Project_BJC_Shirt_Jean_blk",
+"Project_BJC_Shirt_Cut_Jean_blk"
 ]; //Grunt Uniforms
 
 _soldiervest = [
-"CUP_V_RUS_Smersh_1",
-"CUP_V_O_Ins_Carrier_Rig_Light",
-"V_BandollierB_rgr",
-"V_BandollierB_khk"
+"rhs_6sh92",
+"rhs_6sh92_radio",
+"rhs_6sh92_vsr",
+"rhs_6sh92_vsr_radio"
 ]; //Vest for basic soldiers
 
 _soldierfacewear = [
-//Nothing yet!
+"VSM_Goggles",
+"G_Balaclava_blk",
+"rhs_ess_black",
+"G_Squares_Tinted"
 ]; //Misc facewear such as glasses.
 
 _soldierheadgear = [
-"H_Bandanna_khk",
-"H_Bandanna_sand",
-"H_Bandanna_sgg"
+"CUP_H_FR_BoonieMARPAT",
+"CUP_H_FR_BoonieWDL",
+"CUP_H_USMC_BOONIE_PRR_WDL",
+"VSM_Multicam_Boonie",
+"rhs_booniehat2_marpatwd",
+"VSM_Multicam_Boonie"
 ]; //Units helmets and other headgear.
 
 //Weapons start here.
 
 _BasicPrimary = [
-["hlc_rifle_ak47","hlc_30Rnd_762x39_b_ak"],
-["hlc_rifle_akm","hlc_30Rnd_762x39_b_ak"],
+["hlc_rifle_ak74","hlc_30Rnd_545x39_B_AK"],
 ["hlc_rifle_ak74_dirty","hlc_30Rnd_545x39_B_AK"],
 ["hlc_rifle_ak74_dirty2","hlc_30Rnd_545x39_B_AK"]
 ]; //Basic service rifles.
@@ -34,6 +41,7 @@ _BasicPrimary = [
 _BasicSecondary = [
 ["rhs_weap_makarov_pm","rhs_mag_9x18_8_57N181S"],
 ["CUP_hgun_TaurusTracker455","CUP_6Rnd_45ACP_M"],
+["hlc_pistol_C96_Wartime","hlc_10Rnd_763x25_B_C96"],
 ["rhsusf_weap_m1911a1","rhsusf_mag_7x45acp_MHP"]
 ]; //Basic backup pistols.
 
@@ -51,7 +59,7 @@ switch (_typeofUnit) do
     case "basic": //Soldier
     {
 	removeUniform _unit; _unit forceAddUniform (selectRandom _Uniforms); 
-	removeGoggles _unit;
+	removeGoggles _unit; _unit addGoggles (selectRandom _soldierfacewear); 
     removeHeadgear _unit; _unit addHeadgear (selectRandom _soldierheadgear); 
     removeVest _unit; _unit addVest (selectRandom _soldiervest); 
 	_WeaponPrimary = selectRandom _BasicPrimary; [_unit, (_WeaponPrimary select 0), (round (random [2,3,4])), (_WeaponPrimary select 1)] call BIS_fnc_addWeapon;

@@ -143,6 +143,13 @@ class cfgFactionClasses
 		side = 2;
 		icon = "\a3\Data_f\cfgFactionClasses_BLU_ca.paa";
 	};
+	class GGMU_Wolverine
+	{
+		displayName = "Wolverines";
+		priority = 3;
+		side = 1;
+		icon = "\a3\Data_f\cfgFactionClasses_BLU_ca.paa";
+	};
 	class GGMU_PMC_CO
 	{
 		displayName = "Manticore PMC Company";

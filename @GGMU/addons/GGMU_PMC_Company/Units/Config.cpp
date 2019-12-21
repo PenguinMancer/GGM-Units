@@ -1,6 +1,6 @@
 class CfgPatches {
 	class GGMU_PMC_CO {
-		units[] = {"GGMU_PMC_Rifleman_1","GGMU_PMC_Autorifleman_1"};
+		units[] = {"GGMU_PMC_Rifleman","GGMU_PMC_Autorifleman"};
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"GGMU_Core","cba_xeh"};
@@ -56,7 +56,7 @@ class CfgVehicles {
 	};
 	
 	
-	class GGMU_PMC_Rifleman_1: GGMU_PMC_Base //Rifleman
+	class GGMU_PMC_Rifleman: GGMU_PMC_Base //Rifleman
 	{
 		scope=2;
 		displayName = "Manticore Rifleman"; // In-game name of unit
@@ -90,7 +90,7 @@ class CfgVehicles {
 		};
 	};
 
-	class GGMU_PMC_Autorifleman_1: GGMU_PMC_Base //Machine Gunner
+	class GGMU_PMC_Autorifleman: GGMU_PMC_Base //Machine Gunner
 	{
 		scope=2;
 		displayName = "Manticore Autorifleman"; // In-game name of unit
