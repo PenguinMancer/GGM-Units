@@ -87,8 +87,8 @@ switch (_typeofUnit) do
 	removeGoggles _unit;
     removeHeadgear _unit; _unit addHeadgear (selectRandom _soldierheadgear); 
     removeVest _unit; _unit addVest (selectRandom _soldiervest); 
-	_WeaponPrimary = selectRandom _BasicPrimary; [_unit, (_WeaponPrimary select 0), 4), (_WeaponPrimary select 1)] call BIS_fnc_addWeapon;
-    _WeaponSecondary = selectRandom _BasicSecondary; [_unit, (_WeaponSecondary select 0), 3), (_WeaponSecondary select 1)] call BIS_fnc_addWeapon;
+	_WeaponPrimary = selectRandom _BasicPrimary; [_unit, (_WeaponPrimary select 0), 4, (_WeaponPrimary select 1)] call BIS_fnc_addWeapon;
+    _WeaponSecondary = selectRandom _BasicSecondary; [_unit, (_WeaponSecondary select 0), 3, (_WeaponSecondary select 1)] call BIS_fnc_addWeapon;
     }; 
 	case "mg": //Soldier
     {
@@ -96,7 +96,7 @@ switch (_typeofUnit) do
 	removeGoggles _unit;
     removeHeadgear _unit; _unit addHeadgear (selectRandom _mgheadgear); 
     removeVest _unit; _unit addVest (selectRandom _mgvest); 
-	_WeaponPrimary = selectRandom _MGs; [_unit, (_WeaponPrimary select 0), 3), (_WeaponPrimary select 1)] call BIS_fnc_addWeapon;
+	_WeaponPrimary = selectRandom _MGs; [_unit, (_WeaponPrimary select 0), 3, (_WeaponPrimary select 1)] call BIS_fnc_addWeapon;
     }; 
 	case "snipe": //Soldier
     {
@@ -104,8 +104,8 @@ switch (_typeofUnit) do
 	removeGoggles _unit;
     removeHeadgear _unit; _unit addHeadgear (selectRandom _sniperheadgear); 
     removeVest _unit; _unit addVest (selectRandom _snipervest); 
-	_WeaponPrimary = selectRandom _Snipers; [_unit, (_WeaponPrimary select 0), 4), (_WeaponPrimary select 1)] call BIS_fnc_addWeapon;
-    _WeaponSecondary = selectRandom _BasicSecondary; [_unit, (_WeaponSecondary select 0), 3), (_WeaponSecondary select 1)] call BIS_fnc_addWeapon;
+	_WeaponPrimary = selectRandom _Snipers; [_unit, (_WeaponPrimary select 0), 4, (_WeaponPrimary select 1)] call BIS_fnc_addWeapon;
+    _WeaponSecondary = selectRandom _BasicSecondary; [_unit, (_WeaponSecondary select 0), 3, (_WeaponSecondary select 1)] call BIS_fnc_addWeapon;
     }; 
 }; 
 
