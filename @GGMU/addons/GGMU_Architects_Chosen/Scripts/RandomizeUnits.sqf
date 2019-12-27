@@ -12,6 +12,16 @@ _soldiervest = [
 "V_BandollierB_khk"
 ]; //Vest for basic soldiers
 
+_mgvest = [
+"CUP_V_O_Ins_Carrier_Rig_MG",
+"rhssaf_vest_md12_digital"
+]; //Vest for autoriflemen
+
+_snipervest = [
+"V_BandollierB_khk",
+"V_BandollierB_rgr"
+]; //Vest for snipers
+
 _soldierfacewear = [
 //Nothing yet!
 ]; //Misc facewear such as glasses.
@@ -21,6 +31,18 @@ _soldierheadgear = [
 "H_Bandanna_sand",
 "H_Bandanna_sgg"
 ]; //Units helmets and other headgear.
+
+_mgheadgear = [
+"H_Booniehat_khk",
+"H_Booniehat_oli",
+"H_Booniehat_mcamo"
+]; //Hats for snipers
+
+_sniperheadgear = [
+"H_Watchcap_cbr",
+"H_Watchcap_khk",
+"H_Watchcap_camo"
+]; //Hats for snipers
 
 //Weapons start here.
 
@@ -36,6 +58,17 @@ _BasicSecondary = [
 ["CUP_hgun_TaurusTracker455","CUP_6Rnd_45ACP_M"],
 ["rhsusf_weap_m1911a1","rhsusf_mag_7x45acp_MHP"]
 ]; //Basic backup pistols.
+
+_Snipers = [
+["CUP_srifle_SVD_pso","CUP_10Rnd_762x54_SVD_M"],
+["rhs_weap_m76_pso","rhsgref_10Rnd_792x57_m76"]
+]; //Snipers and DMRs
+
+_MGs = [
+["hlc_rifle_rpk_75rnd","hlc_75Rnd_762x39_b_rpk"],
+["hlc_rifle_rpk74n","hlc_60Rnd_545x39_b_rpk"],
+["CUP_lmg_PKM","CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Green_M"]
+]; //Machine Guns.
 
 //strip units of items that would be inside the vests and backpacks we're about to remove
 _magazines = magazines _unit; 
@@ -54,8 +87,25 @@ switch (_typeofUnit) do
 	removeGoggles _unit;
     removeHeadgear _unit; _unit addHeadgear (selectRandom _soldierheadgear); 
     removeVest _unit; _unit addVest (selectRandom _soldiervest); 
-	_WeaponPrimary = selectRandom _BasicPrimary; [_unit, (_WeaponPrimary select 0), (round (random [2,3,4])), (_WeaponPrimary select 1)] call BIS_fnc_addWeapon;
-    _WeaponSecondary = selectRandom _BasicSecondary; [_unit, (_WeaponSecondary select 0), (round (random [1,2,3])), (_WeaponSecondary select 1)] call BIS_fnc_addWeapon;
+	_WeaponPrimary = selectRandom _BasicPrimary; [_unit, (_WeaponPrimary select 0), 4), (_WeaponPrimary select 1)] call BIS_fnc_addWeapon;
+    _WeaponSecondary = selectRandom _BasicSecondary; [_unit, (_WeaponSecondary select 0), 3), (_WeaponSecondary select 1)] call BIS_fnc_addWeapon;
+    }; 
+	case "mg": //Soldier
+    {
+	removeUniform _unit; _unit forceAddUniform (selectRandom _Uniforms); 
+	removeGoggles _unit;
+    removeHeadgear _unit; _unit addHeadgear (selectRandom _mgheadgear); 
+    removeVest _unit; _unit addVest (selectRandom _mgvest); 
+	_WeaponPrimary = selectRandom _MGs; [_unit, (_WeaponPrimary select 0), 3), (_WeaponPrimary select 1)] call BIS_fnc_addWeapon;
+    }; 
+	case "snipe": //Soldier
+    {
+	removeUniform _unit; _unit forceAddUniform (selectRandom _Uniforms); 
+	removeGoggles _unit;
+    removeHeadgear _unit; _unit addHeadgear (selectRandom _sniperheadgear); 
+    removeVest _unit; _unit addVest (selectRandom _snipervest); 
+	_WeaponPrimary = selectRandom _Snipers; [_unit, (_WeaponPrimary select 0), 4), (_WeaponPrimary select 1)] call BIS_fnc_addWeapon;
+    _WeaponSecondary = selectRandom _BasicSecondary; [_unit, (_WeaponSecondary select 0), 3), (_WeaponSecondary select 1)] call BIS_fnc_addWeapon;
     }; 
 }; 
 

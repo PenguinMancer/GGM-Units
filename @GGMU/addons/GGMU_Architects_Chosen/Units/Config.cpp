@@ -42,7 +42,7 @@ class CfgVehicles {
 	class GGMU_ChosenMilitia_Blank: GGMU_ChosenMilitia_Base //Rifleman
 	{
 		scope=2;
-		displayName = "Architect's Chosen Soldier"; // In-game name of unit
+		displayName = "AC Soldier"; // In-game name of unit
 		uniformClass="sweater_drab"; // Uniform Class
 		backpack = ""; // Backpack Class
 		weapons[] = {}; // Weapons added to the unit. Rangefinders/Binoculars also go in weapon slots. Weapons are added at randomization step for this unit.
@@ -58,9 +58,9 @@ class CfgVehicles {
 	class GGMU_ChosenMilitia_Rifleman: GGMU_ChosenMilitia_Base //Rifleman
 	{
 		scope=2;
-		displayName = "Architect's Chosen Grunt"; // In-game name of unit
+		displayName = "AC Grunt"; // In-game name of unit
 		uniformClass="sweater_drab"; // Uniform Class
-		backpack = "usp_crye_zipon"; // Backpack Class
+		backpack = "TAC_MTAP_RG2"; // Backpack Class
 		weapons[] = {"Throw","Put"}; // Weapons added to the unit. Rangefinders/Binoculars also go in weapon slots. Weapons are added at randomization step for this unit.
 		respawnWeapons[]= {"Throw","Put"};
 		magazines[] = {}; //Grenades or magazines added to the unit. None are added at this time.
@@ -78,6 +78,67 @@ class CfgVehicles {
 		{
 			"CUP_V_RUS_Smersh_1", 		//Vest
 			"H_Bandanna_khk",			//Helmet
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+	};
+	
+	class GGMU_ChosenMilitia_AutoRifleman: GGMU_ChosenMilitia_Base //Machine Gunner
+	{
+		scope=2;
+		displayName = "AC Machine Gunner"; // In-game name of unit
+		uniformClass="sweater_drab"; // Uniform Class
+		backpack = "TAC_MTAP_RG2"; // Backpack Class
+		weapons[] = {"Throw","Put"}; // Weapons added to the unit. Rangefinders/Binoculars also go in weapon slots. Weapons are added at randomization step for this unit.
+		respawnWeapons[]= {"Throw","Put"};
+		magazines[] = {}; //Grenades or magazines added to the unit. None are added at this time.
+		respawnMagazines[]= {};
+		linkedItems[]=
+		{
+			"CUP_V_O_Ins_Carrier_Rig_MG", 		//Vest, leave all these in for now, gets changed at randomization step.
+			"H_Booniehat_khk",					//Helmet
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		}; //Item's added to the unit. 
+		respawnLinkedItems[]=
+		{
+			"CUP_V_O_Ins_Carrier_Rig_MG", 		//Vest
+			"H_Booniehat_khk",					//Helmet
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+	};
+	
+	
+	class GGMU_ChosenMilitia_Sniper: GGMU_ChosenMilitia_Base //Sniper
+	{
+		scope=2;
+		displayName = "AC Sniper"; // In-game name of unit
+		uniformClass="sweater_drab"; // Uniform Class
+		backpack = "TAC_MTAP_RG2"; // Backpack Class
+		weapons[] = {"Throw","Put"}; // Weapons added to the unit. Rangefinders/Binoculars also go in weapon slots. Weapons are added at randomization step for this unit.
+		respawnWeapons[]= {"Throw","Put"};
+		magazines[] = {}; //Grenades or magazines added to the unit. None are added at this time.
+		respawnMagazines[]= {};
+		linkedItems[]=
+		{
+			"V_BandollierB_khk", 		//Vest, leave all these in for now, gets changed at randomization step.
+			"H_Watchcap_cbr",			//Helmet
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		}; //Item's added to the unit. 
+		respawnLinkedItems[]=
+		{
+			"V_BandollierB_khk", 		//Vest
+			"H_Watchcap_cbr",			//Helmet
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
