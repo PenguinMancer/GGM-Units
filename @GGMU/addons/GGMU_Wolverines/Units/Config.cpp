@@ -88,6 +88,41 @@ class CfgVehicles {
 			"ItemRadio"
 		};
 	};
+	
+	class GGMU_Wolverine_AutoRifleman: GGMU_Wolverine_Base //Machine Gunner
+	{
+		scope=2;
+		displayName = "Wolverine Machine Gunner"; // In-game name of unit
+		uniformClass="Project_BJC_PCU_Jean_blk1"; // Uniform Class
+		backpack = "VSM_MulticamTropic_Backpack_Kitbag"; // Backpack Class
+		weapons[] = {"Throw","Put"}; // Weapons added to the unit. Rangefinders/Binoculars also go in weapon slots. Weapons are added at randomization step for this unit.
+		respawnWeapons[]= {"Throw","Put"};
+		magazines[] = {}; //Grenades added to the unit. Magazines also go here, but are added at randomization step for this unit.
+		respawnMagazines[]= {};
+		linkedItems[]=
+		{
+			"USP_CRYE_CPC_MCT", 			//Vest
+			"H_Watchcap_blk",				//Helmet
+			"VSM_Goggles", 					//Facewear
+			"ItemGPS",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		}; //Item's added to the unit. 
+		respawnLinkedItems[]=
+		{
+			"USP_CRYE_CPC_MCT", 			//Vest
+			"H_Watchcap_blk",				//Helmet
+			"VSM_Goggles", 					//Facewear
+			"ItemGPS",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+	};
+	
 };
 
 class Extended_Init_Eventhandlers {

@@ -12,10 +12,10 @@ _SoldierVest = [
 "V_BandollierB_khk"
 ]; //Vest for basic soldiers
 
-_MGVest = [
+_HeavyVest = [
 "CUP_V_O_Ins_Carrier_Rig_MG",
-"rhssaf_vest_md12_digital"
-]; //Vest for autoriflemen
+"rhsgref_alice_webbing"
+]; //Vest for heavier loadouts, such as Autoriflemen.
 
 _SniperVest = [
 "V_BandollierB_khk",
