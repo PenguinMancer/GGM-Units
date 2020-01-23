@@ -90,7 +90,7 @@ class CfgVehicles {
 		scope=2;
 		displayName = "AC Machine Gunner"; // In-game name of unit
 		uniformClass="sweater_drab"; // Uniform Class
-		backpack = "TAC_MTAP_RG2"; // Backpack Class
+		backpack = "rhssaf_kitbag_smb"; // Backpack Class
 		weapons[] = {"Throw","Put"}; // Weapons added to the unit. Rangefinders/Binoculars also go in weapon slots. Weapons are added at randomization step for this unit.
 		respawnWeapons[]= {"Throw","Put"};
 		magazines[] = {}; //Grenades or magazines added to the unit. None are added at this time.

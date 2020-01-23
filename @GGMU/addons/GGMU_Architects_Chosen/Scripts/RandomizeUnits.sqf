@@ -161,7 +161,7 @@ switch (_typeofUnit) do
     removeHeadgear _unit; _unit addHeadgear (selectRandom _PatrolHats); 
     removeVest _unit; _unit addVest (selectRandom _SoldierVest); 
 	_WeaponPrimary = selectRandom _LightPrimary; [_unit, (_WeaponPrimary select 0), 4, (_WeaponPrimary select 1)] call BIS_fnc_addWeapon;
-	_WeaponRocket = selectRandom _RPG; [_unit, (_WeaponRocket select 0), 3, (_WeaponRocket select 1)] call BIS_fnc_addWeapon;
+	_WeaponRocket = selectRandom _RPG; [_unit, (_WeaponRocket select 0), 2, (_WeaponRocket select 1)] call BIS_fnc_addWeapon;
     }; 
 	case "sl": //Squad Leader
     {
