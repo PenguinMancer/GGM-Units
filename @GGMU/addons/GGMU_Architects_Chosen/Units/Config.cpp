@@ -206,6 +206,9 @@ class CfgVehicles {
 		};
 	};
 	
+	//Vehicles with changed crew (Kept in external file)
+	#include "AC_Vehicles.hpp"
+	
 };
 
 class Extended_Init_Eventhandlers {
